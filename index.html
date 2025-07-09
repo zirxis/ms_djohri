@@ -3,12 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="موقع تعليمي للعلوم الطبيعية يحتوي على دروس وتمارين في تركيب البروتين، الإنزيمات، المناعة، الاتصال العصبي، ومواضيع الباكالوريا">
-    <meta name="keywords" content="علوم طبيعية، بيولوجيا، تركيب البروتين، إنزيمات، مناعة، اتصال عصبي، باكالوريا">
-    <meta name="author" content="موقع العلوم الطبيعية التعليمي">
-    <title>موقع الأستاذة ميس للعلوم الطبيعية</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="موقع تعليمي متكامل للعلوم الطبيعية يحتوي على دروس، تمارين، نصوص علمية واختبارات لجميع وحدات الباكالوريا">
+    <meta name="keywords" content="علوم طبيعية، بيولوجيا، باكالوريا، دروس، تمارين، تركيب البروتين، إنزيمات، مناعة، اتصال عصبي">
+    <meta name="author" content="الأستاذة جوهري ميس والطالب أسامة شرفي">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#e91e63">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="الأستاذة ميس - المرجع الشامل للعلوم الطبيعية">
+    <meta property="og:description" content="موقع تعليمي متكامل للعلوم الطبيعية مع دروس وتمارين شاملة لطلاب الباكالوريا">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://i.ibb.co/B2bMTNS9/djohri1.jpg">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="الأستاذة ميس للعلوم الطبيعية">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="الأستاذة ميس - المرجع الشامل للعلوم الطبيعية">
+    <meta name="twitter:description" content="موقع تعليمي متكامل للعلوم الطبيعية مع دروس وتمارين شاملة لطلاب الباكالوريا">
+    <meta name="twitter:image" content="https://i.ibb.co/B2bMTNS9/djohri1.jpg">
+    
+    <title>الأستاذة ميس - المرجع الشامل للعلوم الطبيعية</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="preload" href="https://i.ibb.co/B2bMTNS9/djohri1.jpg" as="image">
+    
+    <!-- DNS prefetch for external domains -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//i.ibb.co">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Critical CSS inlined for better performance -->
     <style>
+        /* Critical CSS - Above the fold styles */
         :root {
             --primary-color: #e91e63;
             --primary-dark: #c2185b;
@@ -16,6 +52,7 @@
             --accent-color: #4fc3f7;
             --accent-hover: #29b6f6;
             --text-color: #2d3748;
+            --text-light: #4a5568;
             --light-bg: #fef7f7;
             --card-bg: #ffffff;
             --card-shadow: 0 8px 25px rgba(233, 30, 99, 0.12);
@@ -23,43 +60,51 @@
             --footer-bg: #c2185b;
             --soft-pink: #fce4ec;
             --warm-white: #fffbff;
+            --success-color: #4CAF50;
+            --warning-color: #FFC107;
+            --info-color: #2196F3;
+            --error-color: #f44336;
+            --transition-speed: 0.3s;
+            --border-radius: 12px;
+            --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.15);
+            --shadow-heavy: 0 8px 32px rgba(0, 0, 0, 0.2);
+            
+            /* Dark mode variables */
+            --dark-bg: #1a1a1a;
+            --dark-card-bg: #2d2d2d;
+            --dark-text: #ffffff;
+            --dark-text-secondary: #b0b0b0;
+        }
+
+        /* Dark mode styles */
+        [data-theme="dark"] {
+            --text-color: var(--dark-text);
+            --text-light: var(--dark-text-secondary);
+            --light-bg: var(--dark-bg);
+            --card-bg: var(--dark-card-bg);
+            --warm-white: var(--dark-bg);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', 'Cairo', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            background: linear-gradient(135deg, #fef7f7 0%, #f8f4ff 50%, #fff0f5 100%);
+            font-family: 'Tajawal', 'Segoe UI', 'Cairo', sans-serif;
+            background: linear-gradient(135deg, var(--light-bg) 0%, #f8f4ff 50%, #fff0f5 100%);
             color: var(--text-color);
             line-height: 1.7;
             overflow-x: hidden;
             position: relative;
-        }
-
-        /* Floating particles background */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                radial-gradient(circle at 20% 20%, rgba(233, 30, 99, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(79, 195, 247, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 40% 60%, rgba(255, 107, 157, 0.03) 0%, transparent 50%);
-            z-index: -1;
-            animation: floatParticles 20s ease-in-out infinite;
-        }
-
-        @keyframes floatParticles {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            33% { transform: translate(10px, -10px) rotate(1deg); }
-            66% { transform: translate(-10px, 10px) rotate(-1deg); }
+            min-height: 100vh;
+            transition: background-color var(--transition-speed), color var(--transition-speed);
         }
 
         .container {
@@ -69,7 +114,6 @@
             position: relative;
         }
 
-        /* Header Styles */
         header {
             background: var(--header-gradient);
             color: white;
@@ -77,867 +121,454 @@
             padding: 4rem 0;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 8px 32px rgba(233, 30, 99, 0.3);
-        }
-
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath fill='%23ffffff' fill-opacity='0.08' d='M25 25c0 13.807-11.193 25-25 25S-25 38.807-25 25s11.193-25 25-25 25 11.193 25 25zm50 0c0 13.807-11.193 25-25 25s-25-11.193-25-25 11.193-25 25-25 25 11.193 25 25z'/%3E%3C/svg%3E") repeat;
-            z-index: 0;
-            animation: movePattern 15s linear infinite;
-        }
-
-        @keyframes movePattern {
-            0% { transform: translateX(0) translateY(0); }
-            100% { transform: translateX(100px) translateY(-100px); }
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 1;
+            box-shadow: var(--shadow-heavy);
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
         }
 
         h1 {
-            font-size: 3.2rem;
+            font-size: clamp(2rem, 5vw, 3.2rem);
             margin-bottom: 1rem;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
             animation: fadeInDown 1s ease;
-            font-weight: 300;
+            font-weight: 500;
             letter-spacing: 1px;
-        }
-
-        header p {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            opacity: 0.95;
-            animation: fadeInUp 1s ease 0.3s backwards;
-            font-weight: 300;
-        }
-
-        header h2 {
-            font-size: 1.4rem;
-            margin-top: 1.5rem;
-            color: rgba(255, 255, 255, 0.9);
-            animation: fadeInUp 1s ease 0.6s backwards;
-            font-weight: 300;
-            font-style: italic;
-        }
-
-        /* Main Content Styles */
-        main {
-            padding: 4rem 0;
-            position: relative;
-            z-index: 1;
-        }
-
-        main h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: var(--primary-color);
-            text-align: center;
-            position: relative;
-            padding-bottom: 1rem;
-            animation: fadeIn 1s ease;
-            font-weight: 300;
-        }
-
-        main h2::after {
-            content: 
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 1.5rem;
-            animation: sparkle 2s ease-in-out infinite;
-        }
-
-        @keyframes sparkle {
-            0%, 100% { opacity: 1; transform: translateX(-50%) scale(1); }
-            50% { opacity: 0.6; transform: translateX(-50%) scale(1.2); }
-        }
-
-        main p {
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
-            text-align: center;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            animation: fadeIn 1s ease 0.3s backwards;
-            line-height: 1.8;
-            color: #4a5568;
-        }
-
-        /* Teacher Image */
-        .teacher-image {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            border: 6px solid rgba(233, 30, 99, 0.2);
-            margin: 0 auto 30px;
-            box-shadow: 0 15px 35px rgba(233, 30, 99, 0.2);
-            display: block;
-            overflow: hidden;
-            animation: gentleFloat 4s ease-in-out infinite;
-            background: white;
-            padding: 8px;
-        }
-
-        @keyframes gentleFloat {
-            0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-8px) scale(1.02); }
-        }
-
-        /* Topics Grid */
-        .topics-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-            animation: fadeIn 1s ease 0.6s backwards;
-        }
-
-        .topic-card {
-            background: linear-gradient(145deg, #ffffff 0%, #fef7f7 100%);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--card-shadow);
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            border: 1px solid rgba(233, 30, 99, 0.1);
-        }
-
-        .topic-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(233, 30, 99, 0.02) 0%, rgba(79, 195, 247, 0.02) 100%);
-            opacity: 0;
-            transition: opacity 0.3s;
-            z-index: 1;
-        }
-
-        .topic-card:hover::before {
-            opacity: 1;
-        }
-
-        .topic-card:hover {
-            transform: translateY(-12px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(233, 30, 99, 0.2);
-        }
-
-        .topic-header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 2rem 1.5rem;
-            font-size: 1.5rem;
-            font-weight: 400;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .topic-header::before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: -100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.8s;
-        }
-
-        .topic-card:hover .topic-header::before {
-            left: 100%;
-        }
-
-        .topic-body {
-            padding: 2rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            z-index: 2;
-        }
-
-        .topic-body p {
-            flex-grow: 1;
-            margin-bottom: 2rem;
-            text-align: right;
-            font-size: 1.05rem;
-            line-height: 1.7;
-            color: #4a5568;
-        }
-
-        .topic-link {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
-            color: white;
-            text-decoration: none;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-weight: 500;
-            transition: all 0.3s;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            box-shadow: 0 4px 15px rgba(79, 195, 247, 0.3);
-        }
-
-        .topic-link::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4), transparent);
-            transform: translateX(-100%);
-            transition: transform 0.6s;
-        }
-
-        .topic-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(79, 195, 247, 0.4);
-        }
-
-        .topic-link:hover::before {
-            transform: translateX(100%);
-        }
-
-        /* Topic Icons */
-        .topic-icon {
-            display: block;
-            font-size: 2.8rem;
-            text-align: center;
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
-            animation: iconPulse 3s ease-in-out infinite;
-        }
-
-        @keyframes iconPulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, #ffffff 0%, var(--soft-pink) 100%);
-            border-radius: 25px;
-            padding: 3.5rem 2.5rem;
-            text-align: center;
-            margin: 5rem auto;
-            max-width: 800px;
-            box-shadow: 0 15px 35px rgba(233, 30, 99, 0.15);
-            border: 1px solid rgba(233, 30, 99, 0.1);
-        }
-
-        .cta-section h3 {
-            font-size: 2rem;
-            color: var(--primary-dark);
-            margin-bottom: 1.5rem;
-            font-weight: 300;
-        }
-
-        .cta-section p {
-            margin-bottom: 2.5rem;
-            font-size: 1.1rem;
-        }
-
-        .cta-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-            color: white;
-            padding: 1.2rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s;
-            font-size: 1.1rem;
-            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3);
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(233, 30, 99, 0.4);
-        }
-
-        /* Footer Styles */
-        footer {
-            background: linear-gradient(135deg, var(--footer-bg), #ad1457);
-            color: white;
-            padding: 4rem 0 1rem;
-            margin-top: 5rem;
-            position: relative;
-        }
-
-        .footer-wave {
-            position: absolute;
-            top: -80px;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' opacity='.25' fill='%23c2185b'%3E%3C/path%3E%3Cpath d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z' opacity='.5' fill='%23c2185b'%3E%3C/path%3E%3Cpath d='M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z' fill='%23c2185b'%3E%3C/path%3E%3C/svg%3E");
-            background-size: cover;
-        }
-
-        .footer-content {
-            text-align: center;
-        }
-
-        .footer-links {
-            margin: 2rem 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.9);
-            margin: 0.5rem 1.5rem;
-            text-decoration: none;
-            font-weight: 400;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-color);
-            transform: translateY(-2px);
-        }
-
-        .footer-links a i {
-            margin-left: 0.5rem;
-        }
-
-        .footer-text {
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            font-weight: 300;
-        }
-
-        .flashing-text {
-            font-size: 1.4rem;
-            font-weight: 400;
-            color: rgba(255, 255, 255, 0.95);
-            animation: gentleGlow 3s ease-in-out infinite;
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.8rem 2rem;
-            border-radius: 30px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
-        }
-
-        @keyframes gentleGlow {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.8; transform: scale(1.02); }
-        }
-
-        /* Social Media Icons */
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            margin-top: 2rem;
-            gap: 1.5rem;
-        }
-
-        .social-icon {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.15);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-            color: white;
-            text-decoration: none;
-            backdrop-filter: blur(5px);
-        }
-
-        .social-icon:hover {
-            background: var(--accent-color);
-            transform: translateY(-5px) scale(1.1);
-        }
-
-        /* Back to Top Button */
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.3s;
-            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3);
-            z-index: 999;
-        }
-
-        .back-to-top.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .back-to-top:hover {
-            transform: translateY(-5px) scale(1.1);
-            box-shadow: 0 15px 35px rgba(233, 30, 99, 0.4);
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
         }
 
         @keyframes fadeInDown {
             from { opacity: 0; transform: translateY(-30px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Heart Animation */
-        .heart-animation {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 2rem;
-            color: rgba(255, 255, 255, 0.6);
-            animation: heartBeat 2s ease-in-out infinite;
-        }
-
-        @keyframes heartBeat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .container { padding: 1.5rem; }
-            h1 { font-size: 2.8rem; }
-            main h2 { font-size: 2.2rem; }
-        }
-
-        @media (max-width: 768px) {
-            .topics-container {
-                grid-template-columns: 1fr;
-                max-width: 500px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            h1 { font-size: 2.4rem; }
-            .footer-links { flex-direction: column; }
-            .footer-links a { margin: 0.5rem 0; }
-        }
-
-        @media (max-width: 480px) {
-            h1 { font-size: 2rem; }
-            header p { font-size: 1.1rem; }
-            main h2 { font-size: 1.8rem; }
-            .topic-header {
-                font-size: 1.3rem;
-                padding: 1.5rem 1rem;
-            }
-            .teacher-image {
-                width: 180px;
-                height: 180px;
-            }
-        }
     </style>
+    
+    <!-- Link to external CSS file for non-critical styles -->
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
 </head>
 <body>
-    <header>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
+
+    <!-- Progress Bar -->
+    <div class="progress-container" role="progressbar" aria-label="تقدم التمرير في الصفحة">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner" role="status" aria-live="polite">
+        <div class="spinner"></div>
+        <p class="spinner-text">جاري التحميل...</p>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification" role="alert" aria-live="polite">
+        <i class="fas fa-check-circle" aria-hidden="true"></i>
+        <span id="notificationText">تم الإجراء بنجاح</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav" role="navigation" aria-label="التنقل الرئيسي">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" aria-label="الأستاذة ميس - الصفحة الرئيسية">
+                <i class="fas fa-atom" aria-hidden="true"></i>
+                <span>الأستاذة ميس</span>
+            </a>
+
+            <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع المظلم" title="تبديل الوضع المظلم">
+                <i class="fas fa-moon" aria-hidden="true"></i>
+            </button>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="تبديل القائمة" aria-expanded="false" title="فتح القائمة">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks" role="menubar">
+                <li role="none"><a href="#" class="active" role="menuitem" tabindex="0">الرئيسية</a></li>
+                <li role="none"><a href="#lessons" role="menuitem" tabindex="0">الدروس</a></li>
+                <li role="none"><a href="#exercises" role="menuitem" tabindex="0">التمارين</a></li>
+                <li role="none"><a href="#about" role="menuitem" tabindex="0">عن الأستاذة</a></li>
+                <li role="none"><a href="#contact" role="menuitem" tabindex="0">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header role="banner">
         <div class="header-content">
-            <h1>الأستاذة ميس للعلوم 🌸🔬</h1>
+            <h1>الأستاذة ميس للعلوم <span aria-hidden="true">🌸🔬</span></h1>
             <p>مرجعك الشامل للنجاح في مادة العلوم الطبيعية</p>
             <p>من إعداد الأستاذة جوهري ميس والطالب أسامة شرفي</p>
-            <h2>لا تنسونا من صالح دعائكم 💜</h2>
+            <h2>لا تنسونا من صالح دعائكم <span aria-hidden="true">💜</span></h2>
         </div>
-        <div class="heart-animation">
+        <div class="heart-animation" aria-hidden="true">
             💖
         </div>
     </header>
 
-    <main>
+    <main id="main-content" role="main">
         <div class="container">
-            <img src="https://i.ibb.co/B2bMTNS9/djohri1.jpg" alt="الأستاذة ميس" class="teacher-image">
+            <picture>
+                <source srcset="https://i.ibb.co/B2bMTNS9/djohri1.jpg" type="image/jpeg">
+                <img src="https://i.ibb.co/B2bMTNS9/djohri1.jpg" 
+                     alt="صورة الأستاذة ميس جوهري، معلمة العلوم الطبيعية" 
+                     class="teacher-image" 
+                     loading="lazy" 
+                     width="220" 
+                     height="220"
+                     decoding="async">
+            </picture>
+            
             <h2>مرحباً بك في عالمنا التعليمي المميز</h2>
-            <p>نقدم لك تجربة تعليمية فريدة ومميزة في العلوم الطبيعية، مصممة خصيصاً لطالبات وطلاب الباكالوريا بأسلوب سهل ومبسط يجعل التعلم متعة حقيقية 🌟</p>
+            <p>نقدم لك تجربة تعليمية فريدة ومميزة في العلوم الطبيعية، مصممة خصيصاً لطالبات وطلاب الباكالوريا بأسلوب سهل ومبسط يجعل التعلم متعة حقيقية <span aria-hidden="true">🌟</span></p>
 
-            <div class="topics-container">
-                <div class="topic-card">
-                    <div class="topic-header">تركيب البروتين 🧬</div>
-                    <div class="topic-body">
-                        <i class="fas fa-dna topic-icon"></i>
-                        <p>اكتشفي أسرار عملية تركيب البروتين والشفرة الوراثية بطريقة مبسطة وممتعة، مع أمثلة واضحة وتمارين متدرجة تساعدك على الفهم العميق.</p>
-                        <a href="تركيب_البروتين.pdf" class="topic-link">ابدئي التعلم <i class="fas fa-heart"></i></a>
-                    </div>
+            <!-- Enhanced Search Bar -->
+            <div class="search-container">
+                <div class="search-wrapper">
+                    <label for="searchBar" class="sr-only">البحث في المحتوى</label>
+                    <input type="search" 
+                           class="search-bar" 
+                           id="searchBar" 
+                           placeholder="ابحث في الدروس والتمارين..." 
+                           aria-label="البحث في المحتوى"
+                           autocomplete="off"
+                           spellcheck="false">
+                    <button class="search-btn" id="searchBtn" aria-label="بحث" title="بحث">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
                 </div>
-
-                <div class="topic-card">
-                    <div class="topic-header">الإنزيمات ⚗️</div>
-                    <div class="topic-body">
-                        <i class="fas fa-vial topic-icon"></i>
-                        <p>تعرفي على عالم الإنزيمات الرائع وكيف تعمل هذه المحفزات الحيوية في أجسامنا، مع شرح مفصل وتجارب ممتعة لفهم أفضل.</p>
-                        <a href="الإنزيمات.pdf" class="topic-link">استكشفي الآن <i class="fas fa-heart"></i></a>
-                    </div>
-                </div>
-
-                <div class="topic-card">
-                    <div class="topic-header">المناعة 🛡️</div>
-                    <div class="topic-body">
-                        <i class="fas fa-shield-virus topic-icon"></i>
-                        <p>اكتشفي كيف يدافع جسمك عن نفسه من خلال فهم نظام المناعة المذهل، مع دروس شاملة وأمثلة من الحياة اليومية.</p>
-                        <a href="المناعة.pdf" class="topic-link">تعلمي المزيد <i class="fas fa-heart"></i></a>
-                    </div>
-                </div>
-
-                <div class="topic-card">
-                    <div class="topic-header">الاتصال العصبي 🧠</div>
-                    <div class="topic-body">
-                        <i class="fas fa-brain topic-icon"></i>
-                        <p>رحلة مثيرة في عالم الجهاز العصبي لفهم كيف تنتقل الرسائل في أجسامنا، مع شروحات بصرية وأسلوب سلس ومميز.</p>
-                        <a href="الاتصال_العصبي.pdf" class="topic-link">ابدئي الرحلة <i class="fas fa-heart"></i></a>
-                    </div>
-                </div>
-
-                <div class="topic-card">
-                    <div class="topic-header">التركيب الضوئي 📚</div>
-                    <div class="topic-body">
-                        <i class="fas fa-leaf topic-icon"></i>
-                        <p>كل مايخص وحدة التركيب الضوئي .</p>
-                        <a href="دروس_التركيب_الضوئي.pdf" class="topic-link">ابدئي التدريب <i class="fas fa-heart"></i></a>
-                    </div>
-                </div>
-
-                <div class="topic-card">
-                    <div class="topic-header">العلاقة بين بنية و وظيفة البروتين</div>
-                    <div class="topic-body">
-                        <i class="fas fa-project-diagram topic-icon"></i>
-                        <p> كل ما يخص العلاقة بين بنية و وظيفة البروتين</p>
-                        <a href="دروس_الوحدة_الثالثة.pdf" class="topic-link">حققي التفوق <i class="fas fa-heart"></i></a>
-                    </div>
-                </div>
+                <div class="search-results" id="searchResults" role="listbox" aria-label="نتائج البحث"></div>
             </div>
-			<section class="exercises-section">
-    <h2 style="color:#e91e63; text-align:center;">📚 تمارين كل وحدة</h2>
 
-    <title>تمارين الوحدات الدراسية</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
+            <!-- Lessons Section -->
+            <section id="lessons" aria-labelledby="lessons-heading">
+                <h2 id="lessons-heading">الدروس التعليمية <span aria-hidden="true">📖</span></h2>
+                <p>اختر الوحدة التي تريد دراستها من بين الدروس التالية، كل درس يحتوي على شرح مفصل وأمثلة تطبيقية</p>
 
-        body {
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-        }
+                <div class="topics-container">
+                    <article class="topic-card">
+                        <header class="topic-header">
+                            <h3>تركيب البروتين <span aria-hidden="true">🧬</span></h3>
+                        </header>
+                        <div class="topic-body">
+                            <i class="fas fa-dna topic-icon" aria-hidden="true"></i>
+                            <p>اكتشفي أسرار عملية تركيب البروتين والشفرة الوراثية بطريقة مبسطة وممتعة، مع أمثلة واضحة وتمارين متدرجة تساعدك على الفهم العميق.</p>
+                            <button class="topic-link" 
+                                    data-pdf="تركيب_البروتين.pdf" 
+                                    aria-label="فتح درس تركيب البروتين"
+                                    title="فتح درس تركيب البروتين">
+                                ابدئي التعلم <i class="fas fa-heart" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </article>
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
+                    <article class="topic-card">
+                        <header class="topic-header">
+                            <h3>الإنزيمات <span aria-hidden="true">⚗️</span></h3>
+                        </header>
+                        <div class="topic-body">
+                            <i class="fas fa-vial topic-icon" aria-hidden="true"></i>
+                            <p>تعرفي على عالم الإنزيمات الرائع وكيف تعمل هذه المحفزات الحيوية في أجسامنا، مع شرح مفصل وتجارب ممتعة لفهم أفضل.</p>
+                            <button class="topic-link" 
+                                    data-pdf="الإنزيمات.pdf" 
+                                    aria-label="فتح درس الإنزيمات"
+                                    title="فتح درس الإنزيمات">
+                                استكشفي الآن <i class="fas fa-heart" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </article>
 
-        .header {
-            background-color: #e91e63;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-        }
+                    <article class="topic-card">
+                        <header class="topic-header">
+                            <h3>المناعة <span aria-hidden="true">🛡️</span></h3>
+                        </header>
+                        <div class="topic-body">
+                            <i class="fas fa-shield-virus topic-icon" aria-hidden="true"></i>
+                            <p>اكتشفي كيف يدافع جسمك عن نفسه من خلال فهم نظام المناعة المذهل، مع دروس شاملة وأمثلة من الحياة اليومية.</p>
+                            <button class="topic-link" 
+                                    data-pdf="المناعة.pdf" 
+                                    aria-label="فتح درس المناعة"
+                                    title="فتح درس المناعة">
+                                تعلمي المزيد <i class="fas fa-heart" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </article>
 
-        .header h1 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-            font-weight: normal;
-        }
+                    <article class="topic-card">
+                        <header class="topic-header">
+                            <h3>الاتصال العصبي <span aria-hidden="true">🧠</span></h3>
+                        </header>
+                        <div class="topic-body">
+                            <i class="fas fa-brain topic-icon" aria-hidden="true"></i>
+                            <p>رحلة مثيرة في عالم الجهاز العصبي لفهم كيف تنتقل الرسائل في أجسامنا، مع شروحات بصرية وأسلوب سلس ومميز.</p>
+                            <button class="topic-link" 
+                                    data-pdf="الاتصال_العصبي.pdf" 
+                                    aria-label="فتح درس الاتصال العصبي"
+                                    title="فتح درس الاتصال العصبي">
+                                ابدئي الرحلة <i class="fas fa-heart" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </article>
 
-        .header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
+                    <article class="topic-card">
+                        <header class="topic-header">
+                            <h3>التركيب الضوئي <span aria-hidden="true">🌿</span></h3>
+                        </header>
+                        <div class="topic-body">
+                            <i class="fas fa-leaf topic-icon" aria-hidden="true"></i>
+                            <p>كل ما يخص وحدة التركيب الضوئي من شرح مفصل للتفاعلات الضوئية واللاضوئية، مع رسوم توضيحية وتمارين تطبيقية.</p>
+                            <button class="topic-link" 
+                                    data-pdf="دروس_التركيب_الضوئي.pdf" 
+                                    aria-label="فتح درس التركيب الضوئي"
+                                    title="فتح درس التركيب الضوئي">
+                                ابدئي التدريب <i class="fas fa-heart" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </article>
 
-        .units-container {
-            padding: 40px 30px;
-        }
+                    <article class="topic-card">
+                        <header class="topic-header">
+                            <h3>بنية ووظيفة البروتين <span aria-hidden="true">🧪</span></h3>
+                        </header>
+                        <div class="topic-body">
+                            <i class="fas fa-project-diagram topic-icon" aria-hidden="true"></i>
+                            <p>اكتشفي العلاقة بين بنية البروتين ووظيفته من خلال شرح مبسط للتركيب الأولي والثانوي والثالثي والرباعي للبروتينات.</p>
+                            <button class="topic-link" 
+                                    data-pdf="دروس_الوحدة_الثالثة.pdf" 
+                                    aria-label="فتح درس بنية ووظيفة البروتين"
+                                    title="فتح درس بنية ووظيفة البروتين">
+                                حققي التفوق <i class="fas fa-heart" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
-        .units-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
+            <!-- Exercises Section -->
+            <section class="exercises-section" id="exercises" aria-labelledby="exercises-heading">
+                <h2 id="exercises-heading">تمارين الوحدات <span aria-hidden="true">📚</span></h2>
+                <p>تدربي على حل التمارين لكل وحدة لتثبيت المعلومات وتحسين مستوى الفهم والاستيعاب</p>
 
-        .unit-card {
-            background: white;
-            border: 2px solid #e91e63;
-            border-radius: 8px;
-            padding: 25px;
-            text-align: center;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            text-decoration: none;
-            color: #333;
-            display: block;
-        }
+                <div class="units-container">
+                    <header class="exercises-header">
+                        <h3>بنك التمارين الشامل</h3>
+                        <p>اختر الوحدة لتحميل التمارين الخاصة بها</p>
+                    </header>
 
-        .unit-card:hover {
-            background-color: #e91e63;
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
-        }
+                    <div class="units-grid">
+                        <a href="سلسلة_تمارين_الوحدة_الاولى_والثانية_2025.pdf" 
+                           class="unit-card" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           data-unit-name="تركيب البروتين" 
+                           aria-label="تحميل تمارين تركيب البروتين"
+                           title="تحميل تمارين تركيب البروتين">
+                            <span class="unit-icon" aria-hidden="true">🧬</span>
+                            <div class="unit-title">
+                                <span class="pdf-icon" aria-hidden="true">📄</span>
+                                تركيب البروتين
+                            </div>
+                            <div class="unit-description">
+                                دراسة تركيب البروتينات والأحماض الأمينية والروابط الببتيدية
+                            </div>
+                        </a>
 
-        .unit-card:visited {
-            color: #333;
-        }
+                        <a href="D8B3D984D8B3D984D8A920D8AAD985D8A7D8B1D98A.pdf" 
+                           class="unit-card" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           data-unit-name="الأنزيمات" 
+                           aria-label="تحميل تمارين الأنزيمات"
+                           title="تحميل تمارين الأنزيمات">
+                            <span class="unit-icon" aria-hidden="true">⚡</span>
+                            <div class="unit-title">
+                                <span class="pdf-icon" aria-hidden="true">📄</span>
+                                الأنزيمات
+                            </div>
+                            <div class="unit-description">
+                                خصائص الأنزيمات وآلية عملها والعوامل المؤثرة على نشاطها
+                            </div>
+                        </a>
 
-        .unit-card:hover:visited {
-            color: white;
-        }
+                        <a href="photo_2025-06-30_00-16-54.jpg" 
+                           class="unit-card" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           data-unit-name="علاقة بنية البروتين بوظيفته" 
+                           aria-label="تحميل تمارين علاقة بنية البروتين بوظيفته"
+                           title="تحميل تمارين علاقة بنية البروتين بوظيفته">
+                            <span class="unit-icon" aria-hidden="true">🏗️</span>
+                            <div class="unit-title">
+                                <span class="pdf-icon" aria-hidden="true">📄</span>
+                                علاقة بنية البروتين بوظيفته
+                            </div>
+                            <div class="unit-description">
+                                كيفية تحديد التركيب ثلاثي الأبعاد للبروتين وظيفته البيولوجية
+                            </div>
+                        </a>
 
-        .unit-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            display: block;
-        }
+                        <a href="تمارين_المناعة.pdf" 
+                           class="unit-card" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           data-unit-name="المناعة" 
+                           aria-label="تحميل تمارين المناعة"
+                           title="تحميل تمارين المناعة">
+                            <span class="unit-icon" aria-hidden="true">🛡️</span>
+                            <div class="unit-title">
+                                <span class="pdf-icon" aria-hidden="true">📄</span>
+                                المناعة
+                            </div>
+                            <div class="unit-description">
+                                جهاز المناعة الفطري والمكتسب والأجسام المضادة واللقاحات
+                            </div>
+                        </a>
 
-        .unit-title {
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+                        <a href="سلسلة_تمارين_الاتصال.pdf" 
+                           class="unit-card" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           data-unit-name="الاتصال العصبي" 
+                           aria-label="تحميل تمارين الاتصال العصبي"
+                           title="تحميل تمارين الاتصال العصبي">
+                            <span class="unit-icon" aria-hidden="true">🧠</span>
+                            <div class="unit-title">
+                                <span class="pdf-icon" aria-hidden="true">📄</span>
+                                الاتصال العصبي
+                            </div>
+                            <div class="unit-description">
+                                تركيب الخلايا العصبية وانتقال السيال العصبي والمشابك
+                            </div>
+                        </a>
 
-        .unit-description {
-            font-size: 0.95rem;
-            opacity: 0.8;
-            line-height: 1.4;
-        }
+                        <a href="تمارين_التركيب_الضوئي.pdf" 
+                           class="unit-card" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           data-unit-name="التركيب الضوئي" 
+                           aria-label="تحميل تمارين التركيب الضوئي"
+                           title="تحميل تمارين التركيب الضوئي">
+                            <span class="unit-icon" aria-hidden="true">🌱</span>
+                            <div class="unit-title">
+                                <span class="pdf-icon" aria-hidden="true">📄</span>
+                                التركيب الضوئي
+                            </div>
+                            <div class="unit-description">
+                                عملية التركيب الضوئي والتفاعلات الضوئية واللاضوئية
+                            </div>
+                        </a>
+                    </div>
 
-        .unit-card:hover .unit-description {
-            opacity: 1;
-        }
+                    <footer class="exercises-footer">
+                        <p>&copy; 2025 - جميع الحقوق محفوظة للأستاذة ميس</p>
+                    </footer>
+                </div>
+            </section>
 
-        .pdf-icon {
-            display: inline-block;
-            margin-right: 8px;
-            font-size: 1.1rem;
-            color: #e91e63;
-        }
+            <!-- Additional Resources -->
+            <section aria-labelledby="resources-heading">
+                <h2 id="resources-heading">موارد إضافية <span aria-hidden="true">📂</span></h2>
+                <p>استفيدي من هذه الموارد الإضافية لتعزيز فهمك واستعدادك للامتحانات</p>
 
-        .unit-card:hover .pdf-icon {
-            color: white;
-        }
+                <div class="topics-container">
+                    <article class="topic-card">
+                        <header class="topic-header">
+                            <h3>النصوص العلمية <span aria-hidden="true">📝</span></h3>
+                        </header>
+                        <div class="topic-body">
+                            <i class="fas fa-file-alt topic-icon" aria-hidden="true"></i>
+                            <p>مجموعة شاملة من النصوص العلمية لجميع الوحدات مع تحليل مفصل وحلول نموذجية.</p>
+                            <button class="topic-link" 
+                                    data-pdf="نصوص_علمية.pdf" 
+                                    aria-label="فتح النصوص العلمية"
+                                    title="فتح النصوص العلمية">
+                                استكشفي الآن <i class="fas fa-heart" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </article>
 
-        .footer {
-            background-color: #f8f9fa;
-            text-align: center;
-            padding: 20px;
-            border-top: 1px solid #e9ecef;
-            color: #666;
-        }
+                    <article class="topic-card">
+                        <header class="topic-header">
+                            <h3>اختبارات تجريبية <span aria-hidden="true">✍️</span></h3>
+                        </header>
+                        <div class="topic-body">
+                            <i class="fas fa-clipboard-check topic-icon" aria-hidden="true"></i>
+                            <p>اختبارات شاملة لكل الوحدات مع تصحيح مفصل لقياس مستوى التحصيل العلمي.</p>
+                            <button class="topic-link" 
+                                    data-pdf="اختبارات_تجريبية.pdf" 
+                                    aria-label="فتح الاختبارات التجريبية"
+                                    title="فتح الاختبارات التجريبية">
+                                ابدئي الاختبار <i class="fas fa-heart" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </article>
 
-        @media (max-width: 768px) {
-            .container {
-                margin: 0;
-                border-radius: 0;
-            }
-            
-            .header h1 {
-                font-size: 1.8rem;
-            }
-            
-            .units-container {
-                padding: 20px 15px;
-            }
-            
-            .units-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
-            .unit-card {
-                padding: 20px;
-            }
-        }
+                    <article class="topic-card">
+                        <header class="topic-header">
+                            <h3>ملخصات سريعة <span aria-hidden="true">🚀</span></h3>
+                        </header>
+                        <div class="topic-body">
+                            <i class="fas fa-bolt topic-icon" aria-hidden="true"></i>
+                            <p>ملخصات مركزة لكل الوحدات للمراجعة السريعة قبل الامتحانات.</p>
+                            <button class="topic-link" 
+                                    data-pdf="ملخصات_سريعة.pdf" 
+                                    aria-label="فتح الملخصات السريعة"
+                                    title="فتح الملخصات السريعة">
+                                حمّلي الملخصات <i class="fas fa-heart" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
-        /* تأثير لتحميل الـ PDF */
-        .loading {
-            opacity: 0.6;
-            pointer-events: none;
-        }
+            <!-- About Section -->
+            <section id="about" class="cta-section" aria-labelledby="about-heading">
+                <h3 id="about-heading"><span aria-hidden="true">💫</span> من نحن؟</h3>
+                <p>نحن فريق تعليمي متخصص في مادة العلوم الطبيعية، نهدف إلى تقديم محتوى تعليمي متميز وبسيط يساعد الطلاب على الفهم العميق وتحقيق أعلى الدرجات. الأستاذة جوهري ميس معلمة مادة العلوم الطبيعية بخبرة تزيد عن 15 عاماً، والطالب أسامة شرفي متخصص في تطوير المحتوى التعليمي الرقمي.</p>
+                <button class="cta-btn" 
+                        onclick="showNotification('شكراً لزيارتكم موقعنا 💜', 'success')" 
+                        aria-label="معرفة المزيد عنا"
+                        title="معرفة المزيد عنا">
+                    تعرفي علينا أكثر
+                </button>
+            </section>
 
-        .loading::after {
-            content: "جاري التحميل...";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(233, 30, 99, 0.9);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 0.9rem;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>تمارين الوحدات الدراسية</h1>
-            <p>اضغط على الوحدة لتحميل تمارينها</p>
+            <!-- Final CTA -->
+            <section class="cta-section" aria-labelledby="final-cta-heading">
+                <h3 id="final-cta-heading"><span aria-hidden="true">💫</span> انضمي إلى رحلة التفوق</h3>
+                <p>ابدئي معنا اليوم واكتشفي متعة التعلم في العلوم الطبيعية مع أسلوبنا المميز والممتع. نحن هنا لندعمك في كل خطوة! وتذكري أن الأستاذة ميس ترافقك حتى النجاح.</p>
+                <button class="cta-btn" 
+                        onclick="showNotification('نتمنى لك رحلة تعليمية ممتعة 💖', 'success')" 
+                        aria-label="بدء التعلم الآن"
+                        title="بدء التعلم الآن">
+                    ابدئي التعلم الآن
+                </button>
+            </section>
         </div>
+    </main>
 
-        <div class="units-container">
-            <div class="units-grid">
-                <a href="سلسلة_تمارين_الوحدة_الاولى_والثانية_2025.pdf" class="unit-card" target="_blank" onclick="handlePDFClick(this)">
-                    <span class="unit-icon">🧬</span>
-                    <div class="unit-title">
-                        <span class="pdf-icon">📄</span>
-                        تركيب البروتين
-                    </div>
-                    <div class="unit-description">
-                        دراسة تركيب البروتينات والأحماض الأمينية والروابط الببتيدية
-                    </div>
-                </a>
+    <footer id="contact" role="contentinfo">
+        <div class="footer-content">
+            <a href="#" class="footer-logo" aria-label="الأستاذة ميس - الصفحة الرئيسية">
+                <i class="fas fa-atom" aria-hidden="true"></i>
+                <span>الأستاذة ميس</span>
+            </a>
 
-                <a href="D8B3D984D8B3D984D8A920D8AAD985D8A7D8B1D98A.pdf" class="unit-card" target="_blank" onclick="handlePDFClick(this)">
-                    <span class="unit-icon">⚡</span>
-                    <div class="unit-title">
-                        <span class="pdf-icon">📄</span>
-                        الأنزيمات
-                    </div>
-                    <div class="unit-description">
-                        خصائص الأنزيمات وآلية عملها والعوامل المؤثرة على نشاطها
-                    </div>
-                </a>
+            <div class="flashing-text">
+                معاً نحو التفوق العلمي
+            </div>
 
-                <a href="photo_2025-06-30_00-16-54.jpg" class="unit-card" target="_blank" onclick="handlePDFClick(this)">
-                    <span class="unit-icon">🏗️</span>
-                    <div class="unit-title">
-                        <span class="pdf-icon">📄</span>
-                        علاقة بنية البروتين بوظيفته
-                    </div>
-                    <div class="unit-description">
-                        كيفية تحديد التركيب ثلاثي الأبعاد للبروتين وظيفته البيولوجية
-                    </div>
-                </a>
-
-                <a href="تمارين_المناعة.pdf" class="unit-card" target="_blank" onclick="handlePDFClick(this)">
-                    <span class="unit-icon">🛡️</span>
-                    <div class="unit-title">
-                        <span class="pdf-icon">📄</span>
-                        المناعة
-                    </div>
-                    <div class="unit-description">
-                        جهاز المناعة الفطري والمكتسب والأجسام المضادة واللقاحات
-                    </div>
-                </a>
-
-                <a href="سلسلة_تمارين_الاتصال.pdf" class="unit-card" target="_blank" onclick="handlePDFClick(this)">
-                    <span class="unit-icon">🧠</span>
-                    <div class="unit-title">
-                        <span class="pdf-icon">📄</span>
-                        الاتصال العصبي
-                    </div>
-                    <div class="unit-description">
-                        تركيب الخلايا العصبية وانتقال السيال العصبي والمشابك
-                    </div>
-                </a>
-
-                <a href="تمارين_التركيب_الضوئي.pdf" class="unit-card" target="_blank" onclick="handlePDFClick(this)">
-                    <span class="unit-icon">🌱</span>
-                    <div class="unit-title">
-                        <span class="pdf-icon">📄</span>
-                        التركيب الضوئي
-                    </div>
-                    <div class="unit-description">
-                        عملية التركيب الضوئي والتفاعلات الضوئية واللاضوئية
-                    </div>
-                </a>
+            <div class="footer-text">
+                <p>جميع الحقوق محفوظة &copy; 2025 - موقع الأستاذة ميس للعلوم الطبيعية</p>
+                <p>من إعداد الأستاذة جوهري ميس والطالب أسامة شرفي</p>
             </div>
         </div>
+    </footer>
 
-        <div class="footer">
-            <p>© 2025 - جميع الحقوق محفوظة</p>
-        </div>
-    </div>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="العودة لأعلى الصفحة" title="العودة لأعلى الصفحة">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
 
-    <script>
-        function handlePDFClick(element) {
-            // إضافة تأثير التحميل
-            element.classList.add('loading');
-            
-            // إزالة تأثير التحميل بعد ثانيتين
-            setTimeout(() => {
-                element.classList.remove('loading');
-            }, 2000);
-            
-            // في حالة عدم وجود الملف، يمكن إظهار رسالة
-            // هذا مثال على كيفية التعامل مع الأخطاء
-            element.addEventListener('error', function() {
-                alert('عذراً، الملف غير متوفر حالياً. يرجى المحاولة لاحقاً.');
-            });
-        }
-
-        // إضافة تتبع للنقرات (اختياري)
-        document.querySelectorAll('.unit-card').forEach(card => {
-            card.addEventListener('click', function() {
-                const unitName = this.querySelector('.unit-title').textContent.trim();
-                console.log('تم النقر على وحدة: ' + unitName);
-            });
-        });
-    </script>
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
 </body>
 </html>
 
-			<div class="topic-card">
-                    <div class="topic-header">النصوص العلمية ⚗️</div>
-                    <div class="topic-body">
-                        <i class="fas fa-vial topic-icon"></i>
-                        <p>جميع النصوص العلميةلجميع الوحدات .</p>
-                        <a href="نصوص_علمية.pdf" class="topic-link">استكشفي الآن <i class="fas fa-heart"></i></a>
-                    </div>
-                </div>
-
-            <div class="cta-section">
-                <h3>💫 انضمي إلى رحلة التفوق</h3>
-                <p>  وابدئي معنا اليوم واكتشفي متعة التعلم في العلوم الطبيعية مع أسلوبنا المميز والممتع. نحن هنا لندعمك في كل خطوة! وتذكروا أن الأستاذة ميس ترافقكم حتى النهاية </p
