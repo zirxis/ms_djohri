@@ -54,6 +54,12 @@ const searchData = [
         category: 'درس'
     },
     { 
+        title: 'العلاقة بين بنية البروتين ووظيفته', 
+        content: 'التركيب الثلاثي الوظيفة البيولوجية الطي البروتيني الشكل الجزيئي النشاط الحيوي', 
+        url: '#lessons',
+        category: 'درس'
+    },
+    { 
         title: 'الإنزيمات', 
         content: 'المحفزات الحيوية التفاعلات الكيميائية الموقع النشط الركيزة', 
         url: '#lessons',
@@ -870,4 +876,3 @@ window.addEventListener('online', () => {
 window.addEventListener('offline', () => {
     showNotification('تم فقدان الاتصال بالإنترنت', 'warning');
 });
-
